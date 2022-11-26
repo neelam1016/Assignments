@@ -1,0 +1,96 @@
+//navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-white.fixed-top
+  .container-fluid(style='width: 95%;')
+    a.navbar-brand.text-dark(href='#' style='font-weight: bold ;')
+      img.d-inline-block.align-text-centre(src='static/images/logo.jpg' alt='' width='55' height='35')
+      |                 Shop
+    #navbarNav.collapse.navbar-collapse.justify-content-center.link
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active.text-dark(href='/') Home
+        li.nav-item
+          a.nav-link.text-dark(href='/aboutus') About us
+        li.nav-item
+          a.nav-link.text-dark(href='/gallery') Gallary
+        li.nav-item
+          a.nav-link.text-dark(href='/services') Services
+        li.nav-item
+          a.nav-link.text-dark(href='/contactus') Contact Us
+        li.nav-item
+          a.nav-link.text-dark(href='/contactusd') Contact details
+        
+          
+    ul.navbar-nav.ml-auto.nav-flex-icons.link
+      li.nav-item
+        a.nav-link.waves-effect.waves-light.text-dark
+          i.bi.bi-search
+      li.nav-item
+        a.nav-link.waves-effect.waves-light.text-dark
+          i.bi.bi-cart
+      li.nav-item
+        a.nav-link.waves-effect.waves-light.text-dark
+          i.fas.fa-align-justify
+//Carousel
+.container-fluid(style='width: 95%;')
+  .row
+    #carouselExampleCaptions.carousel.slide(data-bs-ride='carousel')
+      .carousel-inner
+        .carousel-item.active.bgimage
+          img.d-block.w-100(src='static/images/bg1.jpg' alt='...')
+          .carousel-caption.d-none.d-md-block
+            .carousel-content
+              h1
+                | The World 
+                br
+                |  Of Extreme
+                |                                     Sports
+              p
+                | Save 
+                span(style='color: blue;') 20%
+                |  all apparel
+              hr
+            .carousel-btn
+              button.btn.btn-warning.text-white.btn-lg.float-start
+                | SHOP NOW
+                i.bi.bi-arrow-right-short.fa-lg
+        .carousel-item.bgimage
+          img.d-block.w-100(src='static/images/bg2.jpg' alt='...')
+          .carousel-caption.d-none.d-md-block
+            .carousel-content
+              h1
+                | The World 
+                br
+                |  Of Extreme
+                |                                     Sports
+              p
+                | Save 
+                span(style='color: blue;') 20%
+                |  all apparel
+              hr
+            .carousel-btn
+              button.btn.btn-warning.text-white.btn-lg.float-start
+                | SHOP NOW
+                i.bi.bi-arrow-right-short.fa-lg
+        .carousel-item.bgimage
+          img.d-block.w-100(src='static/images/bg3.jpg' alt='...')
+          .carousel-caption.d-none.d-md-block
+            .carousel-content
+              h1
+                | The World 
+                br
+                |  Of Extreme Sports
+              p
+                | Save 
+                span(style='color: blue;') 20%
+                |  all apparel
+              hr
+            .carousel-btn
+              button.btn.btn-warning.text-white.btn-lg.float-start
+                | SHOP NOW
+                i.bi.bi-arrow-right-short.fa-lg
+      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.visually-hidden Previous
+      button.carousel-control-next(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.visually-hidden Next

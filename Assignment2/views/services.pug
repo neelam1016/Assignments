@@ -1,0 +1,66 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sports
+  // CSS link
+  link(rel='stylesheet' href='static/style.css')
+  //Bootstrap Link
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+  //FontAwesome link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+body
+  //Header 
+  include ./header.pug
+  //Services
+  .container-fluid.pt-3(style='width: 93.3%;')
+    h1.text-center Services
+    .row.align-items-center
+      .col.me-3.p-3.block
+        strong
+          i.px-3.bg-primary.bi.bi-truck(style='font-size:22px ;')  Free Shopping Worldwide
+        p.my-3
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+        p
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+
+      .col.me-3.p-3.block
+        strong
+          i.px-3.bg-warning.bi.bi-arrow-repeat(style='font-size:22px ;')  100% Money Back - 48 Hours
+        p.my-3
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+        p
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+      .col.p-3.block
+        strong
+          i.px-3.bg-danger.bi.bi-wallet(style='font-size:22px ;')   24/7 Online Customer Support
+        p.my-3
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+        p
+          | Lorem ipsum dolor 
+          | sit amet consectetur adipisicing elit. 
+          | Ex quia accusamus inventore, rem accusantium animi dicta tempora
+          | nostrum excepturi vel ratione assumenda pariatur qui eligendi. Optio deserunt fuga impedit voluptate?
+  .container-fluid.text-center(style='width: 95%;')
+    //Footer
+    include ./footer.pug  
+  //  Bootstrap JS,Fontawesome JS links
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js' integrity='sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==' crossorigin='anonymous' referrerpolicy='no-referrer')

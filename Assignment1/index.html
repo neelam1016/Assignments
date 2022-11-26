@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        // for redirecting
+        const createFunction = () => {
+            location.assign("/createfile")
+        }
+        const deleteFunction = () => {
+            location.assign("/deletedata")
+        }
+        const readFunction = () => {
+            location.assign("/readdata")
+        }
+        const appendFunction = () => {
+            location.assign("/updatedata")
+        }
+    </script>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        header {
+
+            font-size: 40px;
+            color: blue;
+            background-color: aqua;
+        }
+
+        .button-container button {
+            background-color: #fff;
+            font-size: 40px;
+            border: none;
+            outline: none;
+            align-self: center;
+            min-width: 100px;
+            box-shadow: 7px 7px 0px 0px rgba(255,152,154,1);    
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: rgba(255,152,154,0.7);
+            color: #fff;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>File System</h1>
+    </header>
+    <main>
+        <div class="button-container">
+            <button onclick="createFunction()"> Create</button>
+            <button onclick="deleteFunction()">Delete</button>
+            <button onclick="readFunction()">Read</button>
+            <button onclick="appendFunction()">Append</button>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/fontawesome.min.js"
+        integrity="sha512-nKvEIGRKw2OQCR34yLfnWnvrOBxidLG9aK+vzsBxCZ/9ZxgcS4FrYcN+auWUTkCitTVZAt82InDKJ7x+QtKu6g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
