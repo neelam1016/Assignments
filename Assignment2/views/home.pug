@@ -1,0 +1,483 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sports
+  // CSS link
+  link(rel='stylesheet' href='static/style.css')
+  // bootstrap link
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+  //font-awesome link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer')
+body 
+  //Header
+  include ./header.pug
+  //services
+  .container-fluid.pt-3(style='width: 93.3%;')
+    .row.align-items-center
+      .col.bg-primary.me-3.p-3.block
+        strong
+          i.bi.bi-truck(style='font-size:22px ;')  Free Shopping Worldwide
+      .col.bg-warning.me-3.p-3.block
+        strong
+          i.bi.bi-arrow-repeat(style='font-size:22px ;')  100% Money Back - 48 Hours
+      .col.bg-danger.p-3.block
+        strong
+          i.bi.bi-wallet(style='font-size:22px ;')   24/7 Online Customer Support
+// collections
+.container-fluid.text-center(style='width: 95%;')
+  h5.pt-4 FEATURED COLLECTIONS
+  img.mb-3(src='static/images/border.jpg' alt='' height='20px' width='20%')
+  ul.menu
+    li NEW ARRIVALS:
+    li
+      a(href='') Clothing
+    li
+      a(href='') Bags
+    li
+      a(href='') Shoes
+    li
+      a(href='') Tops
+    li
+      a(href='') Accesories
+  // card
+  .card-group
+    .card.shadow.p-3.mb-5.me-3
+      span.position-absolute.top-0.start-40.translate-middle.bg-info.text-white(style='border-radius: 50%; height: 45px; width: 45px; padding-top: 10px;')
+        | New
+      img.card-img-top.p-3.mb-5(src='static/images/cart-img1.jpg' alt='...')
+      .card-body
+        h5.card-title Shoes
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top.p-3.mt-2.mb-10(src='static/images/cart-img2.jpg' alt='...')
+      .card-body
+        h5.card-title Shoes
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top.my-10(src='static/images/cart-img3.jpg' alt='...')
+      .card-body
+        h5.card-title Shoes
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top(src='static/images/cart-img4.jpg' alt='...')
+      .card-body
+        h5.card-title Cap
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      span.position-absolute.top-0.start-40.translate-middle.bg-danger.text-white(style='border-radius: 50%; height: 45px; width: 45px; padding-top: 10px;')
+        | Sale
+      img.card-img-top(src='static/images/cart-img5.jpg' alt='...')
+      .card-body
+        h5.card-title Cap
+        p.card-text $300
+    .card.shadow.p-3.mb-5
+      img.card-img-top(src='static/images/cart-img6.jpg' alt='...')
+      .card-body
+        h5.card-title Bag
+        p.card-text $300
+  .card-group
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top(src='static/images/cart-img7.jpg' alt='...')
+      .card-body
+        h5.card-title Bag
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top(src='static/images/cart-img8.jpg' alt='...')
+      .card-body
+        h5.card-title Card title
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      span.position-absolute.top-0.start-40.translate-middle.bg-info.text-white(style='border-radius: 50%; height: 45px; width: 45px; padding-top: 10px;')
+        | New
+      img.card-img-top(src='static/images/cart-img9.jpg' alt='...')
+      .card-body
+        h5.card-title Jacket
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top(src='static/images/cart-img10.jpg' alt='...')
+      .card-body
+        h5.card-title Jacket
+        p.card-text $300
+    .card.shadow.p-3.mb-5.me-3
+      img.card-img-top(src='static/images/cart-img11.jpg' alt='...')
+      .card-body
+        h5.card-title Tracksuit
+        p.card-text $300
+    .card.shadow.p-3.mb-5
+      span.position-absolute.top-0.start-40.translate-middle.bg-danger.text-white(style='border-radius: 50%; height: 45px; width: 45px; padding-top: 10px;')
+        | Sale
+      img.card-img-top(src='static/images/cart-img12.jpg' alt='...')
+      .card-body
+        h5.card-title Tracksuit
+        p.card-text $300
+  .row.g-0.mb-4
+    .col-5
+      img(src='static/images/About-img.jpg' height='450px' width='500px' alt='...')
+    .col-7
+      h5.text-start.bold Hot Deals
+      | &apos;
+      strong
+        h1.text-start Tulos Draey Skirts 
+      .text-start
+        span.fa.fa-star.checked
+        span.fa.fa-star.checked
+        span.fa.fa-star.checked
+        span.fa.fa-star
+        span.fa.fa-star
+      h3.text-danger.text-start $350.00
+      p.text-start
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dolores.
+        | Dignissimos ullam placeat, illo eligendi eaque quos debitis, cum nulla sit libero quaerat quam
+        | soluta a voluptate eos, accusantium consectetur!
+      .btn-toolbar.mb-3(role='toolbar' aria-label='Toolbar with button groups')
+        h6.pt-2.pe-2 size
+        .btn-group.mr-2(role='group' aria-label='First group')
+          // <button type="button" class="btn ">Size</button>
+          button.btn.border(type='button') S
+          button.btn.border(type='button') M
+          button.btn.border(type='button') L
+          button.btn.border(type='button') XL
+      .btn-toolbar.mb-3(role='toolbar' aria-label='Toolbar with button groups')
+        .btn-group.mr-2(role='group' aria-label='First group')
+          // <button type="button" class="btn ">Size</button>
+          button.btn.border.me-1.bg-primary(type='button')
+            | 25 
+            br
+            |  Days
+          button.btn.border.me-1.bg-primary(type='button')
+            | 12 
+            br
+            |  Hour
+          button.btn.border.me-1.bg-primary(type='button')
+            | 24 
+            br
+            |  Mins
+          button.btn.border.bg-primary(type='button')
+            | 10 
+            br
+            |  Sec
+  // Instagram
+  h3 Instagram
+  img.mb-3(src='static/images/border.jpg' alt='' height='20px' width='20%')
+  div
+    .card-group
+      .card.mb-5.me-3
+        img.card-img-top(src='static/images/insta1.jpg' height='180px' alt='...')
+      .card.mb-5.me-3
+        img.card-img-top(src='static/images/insta2.jpg' height='180px' alt='...')
+      .card.mb-5.me-3
+        img.card-img-top(src='static/images/insta3.jpg' height='180px' alt='...')
+      .card.mb-5.me-3
+        img.card-img-top(src='static/images/insta4.jpg' height='180px' alt='...')
+      .card.mb-5.me-3
+        img.card-img-top(src='static/images/insta5.jpg' height='180px' alt='...')
+      .card.border-white
+        img.card-img-top(src='static/images/insta6.jpg' height='180px' alt='...')
+    // Top Rated sellers
+    .card-group
+      .shadow.me-5
+        h5.text-center.mt-3 BEST SELLERS
+        .scroll.scrollable
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img1.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Shoes
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img2.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Shoes
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img3.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Shoes
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img4.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Caps
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+      .shadow.me-5
+        h5.text-center.mt-3 TOP RATE
+        .scroll.scrollable
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img5.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Caps
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img6.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Bags
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img7.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Bags
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img8.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Sport Kit
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+      .shadow
+        h5.text-center.mt-3 TOP SPECIAL
+        .scroll.scrollable
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img9.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Jacket
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px; ')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img10.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Jacket
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img11.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Tracksuit
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+          .card.mb-3.border-white(style='max-width: 540px;')
+            .row.g-0.ms-3
+              .col-md-4.shadow.p-3
+                img.img-fluid.rounded-start(src='static/images/cart-img12.jpg' alt='...')
+              .col-md-8
+                .card-body
+                  h5.card-title.text-start Tracksuit
+                  .text-start
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star.checked
+                    span.fa.fa-star
+                    span.fa.fa-star
+                  h4.text-danger.text-start $300
+                  .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                      button.btn.border(type='button')
+                        i.bi.bi-cart
+                      button.btn.border(type='button')
+                        i.bi.bi-heart
+                      button.btn.border(type='button')
+                        i.bi.bi-eye-fill
+                      button.btn.border(type='button')
+                        i.bi.bi-crop
+  //Footer                      
+  include ./footer.pug
+  //  Bootstrap JS,Fontawesome JS links
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js' integrity='sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+

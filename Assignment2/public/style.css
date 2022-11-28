@@ -1,0 +1,82 @@
+
+.link a:hover{
+    background-color: blanchedalmond;
+}
+.bgimage{
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100% 100%;
+    height: 560px;
+}
+.carousel-content{
+    text-align:start;
+}
+
+.carousel-content h1{
+    font-size:60px;
+    font-style: italic;
+    color: black;
+}
+.carousel-content p{
+    font-size: 20px; 
+    font-style: italic;
+}
+.carousel-content hr{
+    margin-right: 750px; 
+    border: 1px solid green;
+}
+.carousel-btn{
+    padding-bottom: 100px;
+}
+.block{
+   text-align: center; 
+}
+.menu li{
+    display: inline-block;
+    padding-left: 10px;
+  } 
+.menu li a{
+    text-decoration: none;
+    
+    
+}
+.scroll{
+  width: 380px;
+  height: 370px;
+  margin: 30px auto;
+}
+.scrollable{
+    overflow-y: auto;
+    max-height: 300px;
+  }
+
+  .bgimage{
+    background: url(./images/footer-img.jpg);
+    background-size: 100% 100%;
+    width: 100% 100%;
+    height: 560px;
+    margin-top: 40px;
+}
+
+.checked {
+    color: orange;
+  }
+  .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }
