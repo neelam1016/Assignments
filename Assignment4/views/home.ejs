@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    
+    <!-- bbotstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- adding nav file -->
+    <%- include('./partials/nav'); %>
+        <!-- Jumbotron -->
+        <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+            style="background-image: url('static/images/Bg-img1.jpg');">
+            <h1 class="mb-3 h2" style="font-family: Fantasy; font-size: 70px;">Products</h1>
+
+        </div>
+        
+        <!-- Header -->
+        <div class="container">
+
+            <!-- products -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <% data.forEach(contents=> { %>
+                    <div class="col ">
+                        <div class="card shadow pt-1" style="width:18rem; ">
+                            <div class="text-center rounded">
+                                <img src="<%-contents.url %>" class="card-img-top rounded" style="width: 10rem;"
+                                    alt="<%-contents._id %>">
+                            </div>
+                            <div class="card-body text-center bg-primary ">
+                                <div class="bg-warning">
+                                    <h5 class="card-title">Name Product-<%-contents.name %>
+                                </div>
+                                </h5>
+                                <p class="card-text text-white">Description-<%-contents.description %>
+                                </p>
+                                <p class="card-text text-white">Price-<%-contents.price %>
+                                </p>
+                                <p class="card-text text-white">Quantity-<%-contents.quantity %>
+                                </p>
+
+                                <ul class="list-group list-group-flush">
+                                    <div class="d-flex flex-row justify-content-center ">
+                                        <form action="/updateform/<%-contents._id %>" method="GET">
+                                            <li class="list-group-item mx-2"><input type="submit"
+                                                    class="btn btn-success" value="Edit" /></li>
+                                        </form>
+                                        <form id="delete-form" action="/deleteproduct/<%-contents._id %>" method="GET">
+                                            <li class="list-group-item "><input type="submit" class="btn btn-danger"
+                                                    value="Delete" /></li>
+                                        </form>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% }) %>
+            </div>
+        </div>
+
+        <!-- alert for delete button -->
+        <script>
+            var delete_form = document.getElementById("delete-form");
+            delete_form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                let text = "Do you want to delete";
+                if (confirm(text) == true) {
+                    delete_form.submit();
+                }
+                
+            })
+        </script>
+
+        <!-- adding footer file -->
+        <%- include('./partials/footer'); %>
+
+        <!-- bootstrap link for js -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                crossorigin="anonymous">
+                </script>
+</body>
+
+</html>
