@@ -1,0 +1,27 @@
+const userModel = require("../model/users");
+const bcrypt = require("bcrypt");
+//const jwt=require('jsonwebtoken');
+
+var session;
+function signin(req, res) {
+  let { email, password } = req.body;
+  userModel.findOne({ email: email }, (err, data) => {
+    if (err) {
+      res.render("login", { errMsg: "invalid username and password" });
+    } else if (data == null) {
+      res.render("login", { errMsg: "invalid username and password" });
+    } else {
+      if (bcrypt.compareSync(password, data.password)) {
+        session = req.session;
+        session.name = data.name;
+        
+        res.redirect("/users/menus/");
+        //let token=jwt.sign({userId:data._id,email:email},process.env.SECRET_KEY,{expiresIn:"1h"});
+        // res.render("home",{"token":token});
+      } else {
+        res.render("login", { errMsg: "invalid username and password" });
+      }
+    }
+  });
+}
+module.exports = { signin };

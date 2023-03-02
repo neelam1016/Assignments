@@ -1,0 +1,41 @@
+{{#if id}}
+{{> dashboard}}
+<div class="container">
+
+    <!-- products -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{#each data}}
+        <div class="col ">
+            <div class="card shadow pt-1" style="width:18rem; ">
+                <div class="text-center rounded">
+                    <img src={{imgsrc}} class="card-img-top rounded" style="width: 10rem;" alt="<%-contents._id %>">
+                </div>
+                <div class="card-body text-center bg-primary ">
+                    <div class="bg-warning">
+                        <h5 class="card-title">{{name}}</h5>
+                    </div>
+
+
+                    <p class="card-text text-white">${{price}}
+                    </p>
+
+
+                    <div class="text-center">
+                        <form action="/users/addtocart/{{_id}}" method="post">
+
+                            <button type="submit" class="btn btn-dark mt-2" name="reg">Add to Cart</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+<footer class="bg-dark shadow">
+    <p class="py-3 text-center mt-5 text-white">Copyright &copy; All Right Reserved</p>
+</footer>
+{{/if}}

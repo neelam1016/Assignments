@@ -1,0 +1,31 @@
+{{> nav}}
+<form method="post" action="/users/logindata">
+    <div class="container w-50">
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            <div>
+                <h1 class="text-center">Login</h1>
+            </div>
+            {{#if errMsg}}
+            <div class="alert alert-danger"> {{errMsg}}</div>
+            {{/if}}
+            {{#if sucMsg}}
+            <div class="alert alert-danger"> {{sucMsg}}</div>
+            {{/if}}
+
+
+            <div class="form-group">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-2" name="reg">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

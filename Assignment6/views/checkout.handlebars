@@ -1,0 +1,30 @@
+    {{> dashboard}}
+
+    <div class="container">
+    <form id="vform" method="get" action="/users/orderplaced">
+    <h1>Checkout</h1><br>
+     <div class="alert alert-danger text-center border-sharp" style="display: none;" id="error"
+     role="alert"></div>
+    <label for=""><h4>Credit card</h4></label><br>
+     <input type="number" id="cno" class="w-75"><br>
+    <label><h5>Order Total: ${{total}}</h5></label><br>
+    <input type="submit" class="btn btn-primary" value="Checkout">
+    
+   </form>
+    </div>
+<script>
+ var v_form = document.getElementById("vform");
+        v_form.addEventListener("submit", function(event) {
+        event.preventDefault();
+      let cno = document.getElementById("cno").value;
+         var error = document.getElementById("error");
+       var regcno = /^[0-9]{16,16}$/;
+       if (!regcno.test(cno)) {
+                error.style.display = "block";
+                error.innerHTML = "Credit card should be 16 numbers"
+       }
+       else{
+        v_form.submit();
+       }
+})
+</script>
